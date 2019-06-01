@@ -6,32 +6,41 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="SnacbarView" customModule="SwiftySnacbar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+            <rect key="frame" x="0.0" y="0.0" width="420" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="47.826086956521742" y="34.821428571428569"/>
-        </view>
-        <view contentMode="scaleToFill" id="QcE-9p-gbj">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIs-cb-ldJ">
-                    <rect key="frame" x="87" y="384" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgr-zn-giK">
+                    <rect key="frame" x="16" y="17.5" width="323" height="29"/>
+                    <string key="text">Snackbars contain a text label that directly relates to the process being performed. On mobile, the text label can contain up to two lines of text.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhd-hg-Csy">
+                    <rect key="frame" x="358" y="17" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <viewLayoutGuide key="safeArea" id="6rS-WW-uZx"/>
-            <point key="canvasLocation" x="35" y="441"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="wgr-zn-giK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FX1-Nf-d3X"/>
+                <constraint firstItem="Rhd-hg-Csy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wgr-zn-giK" secondAttribute="trailing" constant="16" id="c7G-Rl-PpY"/>
+                <constraint firstItem="Rhd-hg-Csy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fuT-Kf-Nwq"/>
+                <constraint firstItem="wgr-zn-giK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="kYm-S2-R66"/>
+                <constraint firstAttribute="trailing" secondItem="Rhd-hg-Csy" secondAttribute="trailing" constant="16" id="ufW-lP-Q2h"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="Rhd-hg-Csy" id="RMn-V4-Jst"/>
+                <outlet property="label" destination="wgr-zn-giK" id="PIa-pO-92m"/>
+            </connections>
+            <point key="canvasLocation" x="52.173913043478265" y="38.169642857142854"/>
         </view>
     </objects>
 </document>
