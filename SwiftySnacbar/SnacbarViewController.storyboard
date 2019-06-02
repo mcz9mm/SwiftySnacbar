@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fqj-v0-mDF">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Snacbar View Controller-->
+        <scene sceneID="gcc-vF-0xW">
+            <objects>
+                <viewController storyboardIdentifier="SnacbarViewController" modalPresentationStyle="overFullScreen" id="Fqj-v0-mDF" customClass="SnacbarViewController" customModule="snackSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N98-iu-YYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtp-9e-2hQ">
+                                <rect key="frame" x="0.0" y="814" width="414" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-lB-KWV">
+                                        <rect key="frame" x="16" y="9" width="320" height="30"/>
+                                        <string key="text">Snackbars contain a text label that directly relates to the process being performed. On mobile, the text label can contain up to two lines of text.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFt-SF-zbB">
+                                        <rect key="frame" x="352" y="9" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTappedActionButton:" destination="Fqj-v0-mDF" eventType="touchUpInside" id="q5V-Os-6cw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="BFt-SF-zbB" firstAttribute="centerY" secondItem="mtp-9e-2hQ" secondAttribute="centerY" id="7ew-k8-eMN"/>
+                                    <constraint firstItem="UI3-lB-KWV" firstAttribute="leading" secondItem="mtp-9e-2hQ" secondAttribute="leading" constant="16" id="IS0-eS-SlG"/>
+                                    <constraint firstAttribute="trailing" secondItem="BFt-SF-zbB" secondAttribute="trailing" constant="16" id="JlC-5E-YML"/>
+                                    <constraint firstItem="UI3-lB-KWV" firstAttribute="centerY" secondItem="mtp-9e-2hQ" secondAttribute="centerY" id="eRr-o6-ACy"/>
+                                    <constraint firstItem="BFt-SF-zbB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UI3-lB-KWV" secondAttribute="trailing" constant="16" id="gFs-k4-Iu7"/>
+                                    <constraint firstAttribute="height" constant="48" id="jRv-RN-85c"/>
+                                    <constraint firstItem="UI3-lB-KWV" firstAttribute="bottom" secondItem="BFt-SF-zbB" secondAttribute="bottom" id="tfW-N3-eYQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mtp-9e-2hQ" secondAttribute="trailing" id="02d-gQ-LuX"/>
+                            <constraint firstItem="mtp-9e-2hQ" firstAttribute="bottom" secondItem="xBO-AJ-2so" secondAttribute="bottom" id="BSj-oY-WIK"/>
+                            <constraint firstItem="mtp-9e-2hQ" firstAttribute="leading" secondItem="N98-iu-YYZ" secondAttribute="leading" id="GMs-q9-Fiv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xBO-AJ-2so"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="BFt-SF-zbB" id="2QI-sB-Rt8"/>
+                        <outlet property="snackbarLabel" destination="UI3-lB-KWV" id="NrC-Us-MdT"/>
+                        <outlet property="snackbarView" destination="N98-iu-YYZ" id="gJO-pc-ezF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPQ-iR-Fjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+</document>
