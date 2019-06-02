@@ -8,7 +8,16 @@
 
 import UIKit
 
+/// Snackbar Configre Model
 public final class SnackbarConfigure {
+
+    var text: String?
+
+    var textColor: UIColor?
+
+    var buttonText: String?
+
+    var buttonTextColor: UIColor?
 
     var cornerRadius: CGFloat?
 
@@ -20,31 +29,23 @@ public final class SnackbarConfigure {
 
     var shadowColor: UIColor?
 
-    var text: String?
-
-    var textColor: UIColor?
-
-    var buttonText: String?
-
-    var buttonTextColor: UIColor?
-
-    init(cornerRadius: CGFloat = 4.0,
+    init(text: String = "Hello SwiftySnacbar!",
+         textColor: UIColor = .white,
+         buttonText: String = "Action",
+         buttonTextColor: UIColor = .blue,
+         cornerRadius: CGFloat = 4.0,
          shadowRadius: CGFloat = 1.0,
          shadowOpacity: Float = 1.0,
          shadowOffset: CGSize = CGSize(width: 1, height: 1),
-         shadowColor: UIColor = .black,
-         text: String = "Hello SwiftySnacbar!",
-         textColor: UIColor = .white,
-         buttonText: String = "Action",
-         buttonTextColor: UIColor = .blue) {
+         shadowColor: UIColor = .black) {
 
-        self.cornerRadius = cornerRadius
-        self.shadowRadius = shadowRadius
-        self.shadowOpacity = shadowOpacity
-        self.shadowOffset = shadowOffset
         self.text = text
         self.textColor = textColor
         self.buttonText = buttonText
         self.buttonTextColor = buttonTextColor
+        self.cornerRadius = cornerRadius
+        self.shadowRadius = shadowRadius
+        self.shadowOpacity = shadowOpacity
+        self.shadowOffset = shadowOffset
     }
 }
