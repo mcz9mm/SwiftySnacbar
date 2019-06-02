@@ -16,6 +16,12 @@
 		3FB8132622A398E300D8FE2F /* SnacbarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8131E22A398E300D8FE2F /* SnacbarViewController.storyboard */; };
 		3FB8132722A398E300D8FE2F /* UIViewController+MostTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8131F22A398E300D8FE2F /* UIViewController+MostTopView.swift */; };
 		3FB8132922A398E300D8FE2F /* SnackbarConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8132022A398E300D8FE2F /* SnackbarConfigure.swift */; };
+		3FB8133222A3F46300D8FE2F /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8133122A3F46300D8FE2F /* Snackbar.swift */; };
+		3FB8133322A3F46300D8FE2F /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8133122A3F46300D8FE2F /* Snackbar.swift */; };
+		3FB8133622A3F48000D8FE2F /* SnacbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8133422A3F48000D8FE2F /* SnacbarView.xib */; };
+		3FB8133722A3F48000D8FE2F /* SnacbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8133422A3F48000D8FE2F /* SnacbarView.xib */; };
+		3FB8133822A3F48000D8FE2F /* SnacbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8133522A3F48000D8FE2F /* SnacbarView.swift */; };
+		3FB8133922A3F48000D8FE2F /* SnacbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8133522A3F48000D8FE2F /* SnacbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,9 @@
 		3FB8131E22A398E300D8FE2F /* SnacbarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SnacbarViewController.storyboard; sourceTree = "<group>"; };
 		3FB8131F22A398E300D8FE2F /* UIViewController+MostTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+MostTopView.swift"; sourceTree = "<group>"; };
 		3FB8132022A398E300D8FE2F /* SnackbarConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackbarConfigure.swift; sourceTree = "<group>"; };
+		3FB8133122A3F46300D8FE2F /* Snackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snackbar.swift; sourceTree = "<group>"; };
+		3FB8133422A3F48000D8FE2F /* SnacbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SnacbarView.xib; sourceTree = "<group>"; };
+		3FB8133522A3F48000D8FE2F /* SnacbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnacbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +93,10 @@
 			children = (
 				3F37616A22A23DC100B2256A /* SwiftySnacbar.h */,
 				3FB8131D22A398E300D8FE2F /* SnacbarViewController.swift */,
+				3FB8133122A3F46300D8FE2F /* Snackbar.swift */,
 				3FB8132022A398E300D8FE2F /* SnackbarConfigure.swift */,
+				3FB8133522A3F48000D8FE2F /* SnacbarView.swift */,
+				3FB8133422A3F48000D8FE2F /* SnacbarView.xib */,
 				3FB8131C22A398E300D8FE2F /* Storyboard+Instantiable.swift */,
 				3FB8131F22A398E300D8FE2F /* UIViewController+MostTopView.swift */,
 				3FB8131E22A398E300D8FE2F /* SnacbarViewController.storyboard */,
@@ -195,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB8132522A398E300D8FE2F /* SnacbarViewController.storyboard in Resources */,
+				3FB8133622A3F48000D8FE2F /* SnacbarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB8132622A398E300D8FE2F /* SnacbarViewController.storyboard in Resources */,
+				3FB8133722A3F48000D8FE2F /* SnacbarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB8132722A398E300D8FE2F /* UIViewController+MostTopView.swift in Sources */,
+				3FB8133222A3F46300D8FE2F /* Snackbar.swift in Sources */,
 				3FB8132922A398E300D8FE2F /* SnackbarConfigure.swift in Sources */,
 				3FB8132122A398E300D8FE2F /* Storyboard+Instantiable.swift in Sources */,
 				3FB8132322A398E300D8FE2F /* SnacbarViewController.swift in Sources */,
+				3FB8133822A3F48000D8FE2F /* SnacbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB8133322A3F46300D8FE2F /* Snackbar.swift in Sources */,
 				3F37617622A23DC100B2256A /* SwiftySnacbarTests.swift in Sources */,
+				3FB8133922A3F48000D8FE2F /* SnacbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

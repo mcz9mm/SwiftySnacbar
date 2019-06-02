@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="SnacbarView" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb9-TX-oJ8" customClass="SnacbarView" customModule="snackSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfG-Oe-jye">
+                    <rect key="frame" x="353.5" y="-1" width="44.5" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEB-05-G4F">
+                            <rect key="frame" x="0.0" y="0.0" width="44.5" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="kfc-TR-VAx"/>
+                            </constraints>
+                            <state key="normal" title="Action"/>
+                            <connections>
+                                <action selector="didTappedActionButton:" destination="Zb9-TX-oJ8" eventType="touchUpInside" id="nLh-XI-En0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA¥" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICb-sO-ryC">
+                    <rect key="frame" x="16" y="9.5" width="333.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="DfG-Oe-jye" firstAttribute="centerY" secondItem="Zb9-TX-oJ8" secondAttribute="centerY" id="0CW-Ja-INe"/>
+                <constraint firstItem="DfG-Oe-jye" firstAttribute="leading" secondItem="ICb-sO-ryC" secondAttribute="trailing" constant="4" id="2pv-E4-5cP"/>
+                <constraint firstAttribute="height" constant="48" id="323-gF-IrQ"/>
+                <constraint firstItem="ICb-sO-ryC" firstAttribute="leading" secondItem="TYI-Vb-F5y" secondAttribute="leading" constant="16" id="baF-pT-dAZ"/>
+                <constraint firstItem="ICb-sO-ryC" firstAttribute="centerY" secondItem="Zb9-TX-oJ8" secondAttribute="centerY" id="ju2-e7-p2L"/>
+                <constraint firstItem="TYI-Vb-F5y" firstAttribute="trailing" secondItem="DfG-Oe-jye" secondAttribute="trailing" constant="16" id="jxX-O7-lRV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="TYI-Vb-F5y"/>
+            <connections>
+                <outlet property="actionButton" destination="hEB-05-G4F" id="bYZ-ur-fAF"/>
+                <outlet property="label" destination="ICb-sO-ryC" id="V3J-kZ-zdZ"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+</document>
