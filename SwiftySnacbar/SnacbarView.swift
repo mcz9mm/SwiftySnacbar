@@ -14,23 +14,23 @@ protocol SnacbarViewDelegate: class {
 
 class SnacbarView: UIView {
 
-//    weak var delegate: SnacbarViewDelegate?
+    //    weak var delegate: SnacbarViewDelegate?
 
     @IBOutlet weak var label: UILabel!
 
     @IBOutlet weak var actionButton: UIButton!
 
-    override init(frame: CGRect) { // for using CustomView in code
+    init(frame: CGRect, model: SnackbarConfigure) { // for using CustomView in code
         super.init(frame: frame)
-        self.loadNib()
+        self.loadNib(model: model)
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
 
-    func loadNib() {
-        let loadView = Bundle.main.loadNibNamed("SnacbarView", owner: self, options: nil)?.first as! UIView
+    func loadNib(model: SnackbarConfigure) {
+        let loadView = Bundle.main.loadNibNamed("SnacbarView", owner: self, options: nil)?.first as! SnacbarView
         loadView.frame = self.bounds
         addSubview(loadView)
 
@@ -43,9 +43,23 @@ class SnacbarView: UIView {
                                                       options: [],
                                                       metrics: nil,
                                                       views: ["childView": loadView]))
-    }
 
-    func setView() {
-        label.text = "foo"
+
+        loadView.layer.cornerRadius = model.cornerRadius ?? 4.0
+        loadView.layer.shadowRadius = model.shadowRadius ?? 1.0
+        loadView.layer.shadowOpacity = model.shadowOpacity ?? 0.2
+        loadView.layer.shadowOffset = model.shadowOffset ?? CGSize(width: 1, height: 1)
+        loadView.layer.shadowColor = model.shadowColor?.cgColor ?? nil
+
+        loadView.label.text = model.text
+        loadView.label.textColor = model.textColor
+
+        guard let butotnText = model.buttonText else {
+            loadView.actionButton.isHidden = true
+            return
+        }
+
+        loadView.actionButton.setTitle(butotnText, for: [.normal, .highlighted, .selected])
+        loadView.actionButton.setTitleColor(model.buttonTextColor, for: [.normal, .highlighted, .selected])
     }
 }
