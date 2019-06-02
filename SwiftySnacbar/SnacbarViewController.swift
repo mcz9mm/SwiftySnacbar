@@ -11,7 +11,7 @@ import UIKit
 public class SnacbarViewController: UIViewController {
 
     // MARK - Instance
-    public static func show(with configure: SnackbarConfigure, duration: DispatchTime = DispatchTime.now() + 3.0 , completion: (() -> ())?) {
+    public static func show(with configure: SnackbarConfigure, duration: DispatchTime = DispatchTime.now() + 3.0, completion: (() -> ())?) {
         let view = SnacbarViewController.instantiate()
         view.snackbarModel = configure
         let topView = UIApplication.topViewController()
@@ -45,15 +45,22 @@ public class SnacbarViewController: UIViewController {
 
     func configure(with model: SnackbarConfigure) {
 
-        snackbarLabel.text = model.text
-        snackbarLabel.textColor = model.textColor
-        actionButton.setTitle(model.buttonText, for: [.normal, .highlighted, .selected])
-        actionButton.setTitleColor(model.buttonTextColor, for: [.normal, .highlighted, .selected])
         snackbarView.layer.cornerRadius = model.cornerRadius ?? 4.0
         snackbarView.layer.shadowRadius = model.shadowRadius ?? 1.0
         snackbarView.layer.shadowOpacity = model.shadowOpacity ?? 0.2
         snackbarView.layer.shadowOffset = model.shadowOffset ?? CGSize(width: 1, height: 1)
         snackbarView.layer.shadowColor = model.shadowColor?.cgColor ?? nil
+
+        snackbarLabel.text = model.text
+        snackbarLabel.textColor = model.textColor
+
+        guard let butotnText = model.buttonText else {
+            actionButton.isHidden = true
+            return
+        }
+
+        actionButton.setTitle(butotnText, for: [.normal, .highlighted, .selected])
+        actionButton.setTitleColor(model.buttonTextColor, for: [.normal, .highlighted, .selected])
     }
 }
 
